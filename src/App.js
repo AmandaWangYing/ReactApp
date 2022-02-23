@@ -1,11 +1,13 @@
+import React from 'react';
 import logo from './logo.svg';
 import './App.css';
 
-function App() {
+export class App extends React.Component {
+  render() {
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
+        <img src={`${process.env.REACT_APP_CONTENT_HOST}${logo}`} className="App-logo" alt="logo" />
         <p>
           Edit <code>src/App.js</code> and save to reload.
         </p>
@@ -19,7 +21,7 @@ function App() {
         </a>
       </header>
     </div>
-  );
+  );}
 }
 
-export default App;
+//export default App;
